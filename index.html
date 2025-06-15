@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer Nauki</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>Planer Nauki</h1>
+                <button id="darkModeToggle" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="header-controls">
+                <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                <h2 id="currentMonth">Styczeń 2024</h2>
+                <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </header>
+
+        <div class="calendar">
+            <div class="weekdays">
+                <div>Poniedziałek</div>
+                <div>Wtorek</div>
+                <div>Środa</div>
+                <div>Czwartek</div>
+                <div>Piątek</div>
+                <div>Sobota</div>
+                <div>Niedziela</div>
+            </div>
+            <div id="calendarDays" class="days"></div>
+        </div>
+
+        <button id="addTaskBtn" class="add-task-btn">
+            <i class="fas fa-plus"></i> Dodaj Zadanie
+        </button>
+    </div>
+
+    <!-- Modal do dodawania/edycji zadania -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Dodaj Nowe Zadanie</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Tytuł:</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDate">Data:</label>
+                    <input type="date" id="taskDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Opis:</label>
+                    <textarea id="taskDescription" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskPriority">Priorytet:</label>
+                    <select id="taskPriority">
+                        <option value="low">Niski</option>
+                        <option value="medium">Średni</option>
+                        <option value="high">Wysoki</option>
+                    </select>
+                </div>
+                <div class="subtasks-container">
+                    <h3>Podzadania</h3>
+                    <div id="subtasksList"></div>
+                    <button type="button" id="addSubtaskBtn" class="secondary-btn">
+                        <i class="fas fa-plus"></i> Dodaj Podzadanie
+                    </button>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">Zapisz</button>
+                    <button type="button" class="secondary-btn" id="cancelBtn">Anuluj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal do wyświetlania szczegółów zadania -->
+    <div id="taskDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="taskDetailsTitle"></h2>
+            <div class="task-details">
+                <div class="form-group">
+                    <label>Data:</label>
+                    <p id="taskDetailsDate"></p>
+                </div>
+                <div class="form-group">
+                    <label>Priorytet:</label>
+                    <p id="taskDetailsPriority"></p>
+                </div>
+                <div class="form-group">
+                    <label>Opis:</label>
+                    <p id="taskDetailsDescription"></p>
+                </div>
+                <div class="subtasks-section">
+                    <h3>Podzadania</h3>
+                    <ul id="taskDetailsSubtasks" class="subtasks-list"></ul>
+                </div>
+            </div>
+            <div class="task-actions">
+                <button id="editTaskBtn" class="primary-btn">Edytuj</button>
+                <button id="deleteTaskBtn" class="danger-btn">Usuń</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
