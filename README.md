@@ -27,7 +27,7 @@ A modern, responsive web application for managing your study tasks and schedule.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/study-planner.git
+git clone https://github.com/szymcio4581/Planer-Nauki.git
 ```
 
 2. Open `index.html` in your web browser
