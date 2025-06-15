@@ -2,8 +2,6 @@
 
 A modern, responsive web application for managing your study tasks and schedule. Built with vanilla JavaScript, HTML, and CSS.
 
-![Study Planner Screenshot](screenshot.png)
-
 ## Features ✨
 
 - 📅 Interactive calendar interface
@@ -96,9 +94,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Icons from [Font Awesome](https://fontawesome.com/)
 - Fonts from [Google Fonts](https://fonts.google.com/)
-
-## Contact 📧
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-
-Project Link: [https://github.com/yourusername/study-planner](https://github.com/yourusername/study-planner) 
